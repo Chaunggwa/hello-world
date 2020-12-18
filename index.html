@@ -17,10 +17,11 @@
     left: 50%;
     transform: translate(-50%, 50%);
     width: 106px;
+    transform-origin: center;
     height: 106px;
     border: 3px dashed #8AD7C1;
     border-radius: 50%;
-    animation: rotateBorder 2s infinite;
+    animation: rotateBorder 2s infinite alternate;
     transition: all 2s;
     z-index: 1;
   }
@@ -36,7 +37,7 @@
   
   @keyframes rotateBorder {
     to {
-      
+      transform: rotate(
       border-color: #C6FCED;
     }
   }
