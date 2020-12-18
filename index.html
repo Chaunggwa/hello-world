@@ -4,6 +4,9 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <style>
+  * {
+    box-sizing: border-box;
+  }
   div.container {
     position: relative; 
   }
@@ -14,8 +17,27 @@
     transform: translate(-50%, -50%);
     width: 106px;
     height: 106px;
-    border: 2px solid #214252;
+    border: 3px dashed #8AD7C1;
     border-radius: 50%;
+    animation: rotateBorder 2s infinite;
+    transition: all 2s;
+    z-index: 1;
+  }
+  
+  div.container > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 2;
+  }
+  
+  @keyframes rotateBorder {
+    to {
+      transform: rotate(360deg);
+      border-color: #C6FCED;
+    }
   }
 </style>
 </head>
