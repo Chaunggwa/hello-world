@@ -4,49 +4,53 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <style>
-  * {
-    box-sizing: border-box;
-  }
-  div.container {
-    position: relative; 
-    height: 200px;
-  }
-  div.border {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    width: 106px;
-    transform-origin: center;
-    height: 106px;
-    border: 3px dashed #8AD7C1;
-    border-radius: 50%;
-    animation: rotateBorder 2s infinite alternate;
-    transition: all 2s;
-    z-index: 1;
-  }
-  
-  div.container > img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    z-index: 2;
-  }
-  
-  @keyframes rotateBorder {
-    to {
-      transform: rotate(90deg);
-      border-color: #C6FCED;
+    * {
+            box-sizing: border-box;
+            }
+             div.container {
+                 position: relative;
+               
+                 height: 10.6em;
+             }
+    .loader {
+        position: absolute;
+        width: 10em;
+        height: 10em;
+        top: 50%;
+        left: 50%;
+        border-top: 2px dotted #222831;
+        border-bottom: 2px dotted #222831;
+        border-right: 4px dotted #cdc3d3;
+        border-left: 4px dotted #cdc3d3;
+        transform: translate(-50%, -50%) rotate(0deg);
+        border-radius: 50%;
+        animation: rotate 2s infinite linear;
     }
-  }
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+
+    }
+
+    @keyframes rotate  {
+        from {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+        to {
+            transform: translate(-50%, -50%) rotate(360deg);
+        }
+    }
 </style>
 </head>
 <body>
   <div class="container">
-    <div class="border"></div>
-    <img src="thu_rein_soe.jpg" alt="Thu Rein Soe" width="100" height="100" />
-  </div>
+        <div class="loader">
+        </div>
+        <img src="thu_rein_soe.jpg" alt="thu_rein_soe" width="120" height="120"/>
+        </div>
 </body>
 </html>
